@@ -83,6 +83,16 @@ class MovieCard extends React.Component{
         console.log(this);
     }
 
+
+    decStar=()=>{
+        this.setState((prevState)=>{
+            return{
+                stars:prevState.stars-0.5
+            }
+        });
+    }
+
+
     render(){
 
           
@@ -107,7 +117,7 @@ class MovieCard extends React.Component{
                             <div className="star-dis">
                                 <img className="str-btn" 
                                     alt="Decrease" 
-                                    src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png" 
+                                    src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png"  onClick={this.decStar}
                                 />
                                 <img className="stars" 
                                         alt="stars" 
