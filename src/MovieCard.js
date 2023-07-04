@@ -9,9 +9,9 @@
                         
 //                     </div>
 //                     <div className="right">
-//                         <div className="title">The Aveger</div>
-//                         <div className="plot">Super Power shown in this movie</div>
-//                         <div className="price">Rs.299</div>
+                        // <div className="title">The Aveger</div>
+                        // <div className="plot">Super Power shown in this movie</div>
+                        // <div className="price">Rs.299</div>
 
 //                         <div className="footer">
 //                             <div className="rating">8.5</div>
@@ -60,12 +60,26 @@ class MovieCard extends React.Component{
         this.state={
             title:"The Avengers",
             plot:"Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity",
-            price:199,
-            rating:8.9
+            price:"Rs.199",
+            rating:8.9,
+            stars:0
         }
     }
 
-    addStar(){
+    addStar=()=>{
+
+        //form1
+        // this.setState({
+        //     stars: this.state.stars + 0.5
+        // });
+
+        //form2
+        this.setState((prevState)=>{
+            return{
+                stars:prevState.stars+0.5
+            }
+        });
+        
         console.log(this);
     }
 
@@ -83,6 +97,9 @@ class MovieCard extends React.Component{
                     
                  
                     <div className="right">
+                    <div className="title">{this.state.title}</div>
+                        <div className="plot">{this.state.plot}</div>
+                        <div className="price">{this.state.price}</div>
 
                         <div className="footer">
                             <div className="rating">8.5</div>
@@ -100,7 +117,7 @@ class MovieCard extends React.Component{
                                     alt="increase" 
                                     src="https://cdn-icons-png.flaticon.com/128/2997/2997933.png" onClick={this.addStar.bind(this)}
                                 />
-                                <span className="starCount">0</span>
+                                <span className="starCount">{this.state.stars}</span>
                             </div>
 
                         
