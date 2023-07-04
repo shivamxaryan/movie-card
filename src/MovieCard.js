@@ -74,6 +74,9 @@ class MovieCard extends React.Component{
         // });
 
         //form2
+        if(this.state.stars>=5){
+            return;
+        }
         this.setState((prevState)=>{
             return{
                 stars:prevState.stars+0.5
@@ -85,6 +88,9 @@ class MovieCard extends React.Component{
 
 
     decStar=()=>{
+        if(this.state.stars<=0){
+            return;
+        }
         this.setState((prevState)=>{
             return{
                 stars:prevState.stars-0.5
