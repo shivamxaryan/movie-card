@@ -59,7 +59,7 @@ class MovieCard extends React.Component{
         super();
         this.state={
             title:"The Avengers",
-            plot:"Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity",
+            plot:"Earth's mightiest heroes must come together and learn to fight as a team",
             price:"Rs.199",
             rating:8.9,
             stars:0
