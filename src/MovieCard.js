@@ -63,7 +63,8 @@ class MovieCard extends React.Component{
             price:"Rs.199",
             rating:8.9,
             stars:0,
-            fav:false
+            fav:false,
+            cart:false
         }
     }
 
@@ -103,6 +104,14 @@ class MovieCard extends React.Component{
     handlefav=()=>{
         this.setState({
             fav:!this.state.fav
+        })
+    }
+
+
+    //handle cart button
+    handleCart=()=>{
+        this.setState({
+            cart:!this.state.cart
         })
     }
 
@@ -149,8 +158,11 @@ class MovieCard extends React.Component{
                             <button className="favourite-btn" onClick={this.handlefav}>Favourite</button>}
 
 
-                            <button className="cart-btn">Add to Cart</button>
+
+                            {this.state.cart?<button className="decart-btn" onClick={this.handleCart}>Remove from Cart</button>:
+                            <button className="cart-btn" onClick={this.handleCart}>Add to Cart</button>}
                             
+
                         </div>
                     </div>
 

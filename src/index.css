@@ -114,11 +114,17 @@ footer.starCount {
       background-color: #251bb1;
       color: #fff;
       margin: 5px;
-    
 }
 .unfavourite-btn {
   background-color: #db2828;
   color: #fff;
   text-shadow: none;
+  margin: 5px;
+}
+
+.decart-btn{
+  
+  background-color: #db2828;
+  color: #fff;
   margin: 5px;
 }
