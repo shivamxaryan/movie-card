@@ -159,8 +159,11 @@ class MovieCard extends React.Component{
 
 
 
-                            {this.state.cart?<button className="decart-btn" onClick={this.handleCart}>Remove from Cart</button>:
-                            <button className="cart-btn" onClick={this.handleCart}>Add to Cart</button>}
+                            {/* {this.state.cart?<button className="decart-btn" onClick={this.handleCart}>Remove from Cart</button>:
+                            <button className="cart-btn" onClick={this.handleCart}>Add to Cart</button>} */}
+
+                            <button className={this.state.cart?"decart-btn":"cart-btn"} onClick={this.handleCart}>
+                            {this.state.cart?"Remove from Cart":"Add to Cart"}</button>
                             
 
                         </div>
