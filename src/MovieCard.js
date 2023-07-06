@@ -62,7 +62,8 @@ class MovieCard extends React.Component{
             plot:"Earth's mightiest heroes must come together and learn to fight as a team",
             price:"Rs.199",
             rating:8.9,
-            stars:0
+            stars:0,
+            fav:false
         }
     }
 
@@ -96,6 +97,13 @@ class MovieCard extends React.Component{
                 stars:prevState.stars-0.5
             }
         });
+    }
+
+    //handle favourite button
+    handlefav=()=>{
+        this.setState({
+            fav:!this.state.fav
+        })
     }
 
 
@@ -137,7 +145,10 @@ class MovieCard extends React.Component{
                             </div>
 
                         
-                            <button className="favourite-btn">Favourite</button>
+                            {this.state.fav? <button className="unfavourite-btn" onClick={this.handlefav}>Un-favourite</button>:
+                            <button className="favourite-btn" onClick={this.handlefav}>Favourite</button>}
+
+
                             <button className="cart-btn">Add to Cart</button>
                             
                         </div>
