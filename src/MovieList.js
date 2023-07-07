@@ -19,7 +19,7 @@ class MovieList extends Component{
         const{title,plot,price,rating,stars,fav,cart}=this.state;
         return(
            <>
-           <MovieCard title={title} plot={plot} price={price} rating={rating} stars={stars} fav={fav} cart={cart}/>
+           <MovieCard movies={this.state}/>
            </>
         )
 
