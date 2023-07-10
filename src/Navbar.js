@@ -5,11 +5,11 @@ class Navbar extends React.Component{
     render(){
         return(
             <>
-            <div>
-                <div>Title</div>
+            <div style={{width:"100%",height:60,background:"red",display:"flex",justifyContent:"space-between"}}>
+                <div className="title">Movie-App</div>
                 <div>
                     <img alt="cart-icon"/>
-                    <span>0</span>
+                    <span>4</span>
                 </div>
             </div>
             </>
