@@ -56,27 +56,27 @@ import React from "react";
 class MovieCard extends React.Component{
 
    
+//we have to put addStar in movieList because it has state now.
+    // addStar=()=>{
 
-    addStar=()=>{
-
-        //form1
-        // this.setState({
-        //     stars: this.state.stars + 0.5
-        // });
+    //     //form1
+    //     // this.setState({
+    //     //     stars: this.state.stars + 0.5
+    //     // });
 
 
-        //form2
-        if(this.state.stars>=5){
-            return;
-        }
-        this.setState((prevState)=>{
-            return{
-                stars:prevState.stars+0.5
-            }
-        });
+    //     //form2
+    //     if(this.state.stars>=5){
+    //         return;
+    //     }
+    //     this.setState((prevState)=>{
+    //         return{
+    //             stars:prevState.stars+0.5
+    //         }
+    //     });
         
-        console.log(this);
-    }
+    //     console.log(this);
+    // }
 
 
     decStar=()=>{
@@ -138,7 +138,8 @@ class MovieCard extends React.Component{
                                 />
                                 <img className="str-btn" 
                                     alt="increase" 
-                                    src="https://cdn-icons-png.flaticon.com/128/2997/2997933.png" onClick={this.addStar.bind(this)}
+                                    src="https://cdn-icons-png.flaticon.com/128/2997/2997933.png" 
+                                    onClick={()=>{this.props.addStar(this.props.movies)}}
                                 />
                                 <span className="starCount">{stars}</span>
                             </div>
